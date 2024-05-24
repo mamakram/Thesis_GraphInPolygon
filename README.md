@@ -1,6 +1,6 @@
 This repository contains the code both for Tutte's algorithm and the first part of the Polygon Universal algorithm (see https://arxiv.org/abs/2103.06916) that creates the triangulation-respecting sketch.
 
-Both are implemented in Python using numpy, matplotlib, networkx and sagemaths for the generated graphs. PolygonUniversal uses pygeos to generate delaunay triangulations for the given polygon
+Both are implemented in Python using numpy, matplotlib, networkx and sagemaths for the generated graphs. PolygonUniversal uses sect (https://github.com/lycantropos/sect/) to generate delaunay triangulations for the given polygon
 Provided it in this repo are also a few illustrations created by both algorithms, as well as files containing 
 generated 3-connected planar graphs of different sizes, made by using plantri (https://users.cecs.anu.edu.au/~bdm/plantri/) 
 
