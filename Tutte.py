@@ -69,7 +69,7 @@ def tutte_embedding(adj,p,pos,measure = False):
 
 
 if len(sys.argv) < 2:
-	print("Algo.py [0-7]\n0-5:Case 0 to 5 (Various planar embeddings)\n6: Tutte.py file.txt(graphs in Graph6format, one per line) -> draw a randomly chosen graph in file\n 7: Tutte.py file.txt(graphs in Graph6format, one per line) n_graphs:int -> Compute runtime over n_graphs")
+	print("Algo.py [0-7]\n0-5:Case 0 to 5 (Various planar embeddings)\n6: Tutte.py 6 file(graphs in Graph6format, one per line) -> draw a randomly chosen graph in file\n7: Tutte.py 7 file(graphs in Graph6format, one per line) n_graphs:int -> Compute runtime over n_graphs")
 else:
 	draw=True
 	case = int(sys.argv[1])
