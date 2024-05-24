@@ -1,4 +1,3 @@
-from pygeos import polygons,delaunay_triangles, get_coordinates
 from sect.triangulation import Triangulation
 from ground.base import get_context
 import random
@@ -50,7 +49,6 @@ class Polygon_Universal:
         self.debug = debug
         self.pos = pos
         self.cycle = cycle
-        self.polygon= polygons(pos)
         self.adj = adj
         self.n = len(pos)
 
@@ -68,9 +66,6 @@ class Polygon_Universal:
             for p in t.vertices:
                 tmp.append(cycle[pos.index((p.x,p.y))])
             self.triangulation.append(sorted(tmp))
-        #triang = [cycle[pos.index(tuple(i))] for i in get_coordinates(delaunay_triangles(self.polygon)).tolist()]
-
-        print(self.triangulation)
         #create dual of triangulation
         self.dual = {k:[] for k in range(len(self.triangulation))}
         # for any edge sorted index tuple, give the indices of both triangles containing it
@@ -88,7 +83,6 @@ class Polygon_Universal:
                     self.edge_triangle[tmp] = (i,j)
                     self.triangle_edge[(i,j)] = tmp
                     self.triangle_edge[(j,i)] = tmp
-        print(self.edge_triangle)
 
     def intersection(self,*elements):
         """
