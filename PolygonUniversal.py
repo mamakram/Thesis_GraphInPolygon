@@ -434,8 +434,6 @@ else:
             #assign position of the points of the peripheral circuit
             tmp_pos = nx.spectral_layout(nx.cycle_graph(len(cycle)))
             pos = [tuple(tmp_pos[i]) for i in range(len(cycle))]
-            print(cycle)
-            print(pos)
         case 6:
             if len(sys.argv)==5:
                 file = sys.argv[3]
